@@ -1,0 +1,1 @@
+import {describe,it,expect} from 'vitest';import{escapeHtml,money}from'../src/js/utils.js';describe('HTML output protection',()=>{it('escapes markup and quotes',()=>{expect(escapeHtml('<script>"x"&')).toBe('&lt;script&gt;&quot;x&quot;&amp;')})});describe('SSP formatting',()=>{it('formats SSP without cents',()=>expect(money(1500)).toContain('1,500'))});
